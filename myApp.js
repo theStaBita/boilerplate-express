@@ -2,7 +2,7 @@
 var express = require('express');
 var app = express();
 console.log("Hello World");
-app.get("/",absolutePath = __dirname + /views/index.html/file.ext);
+app.get("/",absolutePath = __dirname + "/views/index.html");
 // --> 7)  Mount the Logger middleware here
 
 
