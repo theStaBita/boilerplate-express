@@ -1,8 +1,7 @@
 
 var express = require('express');
 var app = express();
-console.log("Hello World");
-app.get(absolutePath = __dirname + "/json",function(req, res) {res.json({"message": "Hello json"});});
+app.get("/json", function(req, res) {res.json({"message": "Hello json"});});
 app.use(express.static(__dirname + "/public"))
 // --> 7)  Mount the Logger middleware here
 
