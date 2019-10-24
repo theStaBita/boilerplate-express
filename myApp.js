@@ -1,7 +1,15 @@
 
 var express = require('express');
 var app = express();
-app.get("/json", function(req, res) {res.json({"message": "Hello json"});});
+process.env.MESSAGE_STYLE=uppercase;
+app.get("/json", 
+	function(req, res) {
+		res.json({
+			if(process.env.MESSAGE_STYLE == uppercase) {"MESSAGE": "HELLO JSON"}
+			else {"message": "Hello json"}
+		});
+	}
+);
 app.use(express.static(__dirname + "/public"))
 // --> 7)  Mount the Logger middleware here
 
