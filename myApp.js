@@ -39,7 +39,7 @@ app.get('/:word/echo',function(req, res){var word = req.params.word; res.send(re
 
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
-
+app.get('/name?first=firstname&last=lastname', function(req, res){ var first = req.query.first; var last = req.query.last; res.send(res.json({name: first + ' ' + last}))});
   
 /** 11) Get ready for POST Requests - the `body-parser` */
 // place it before all the routes !
