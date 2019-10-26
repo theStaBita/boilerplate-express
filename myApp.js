@@ -35,7 +35,7 @@ app.get("/json", function(req, res){if(process.env.MESSAGE_STYLE==="uppercase"){
 app.get('/now', function(req, res, next) {req.time = new Date().toString();	next();}, function(req, res) {res.send({time:req.time});});
 
 /** 9)  Get input from client - Route parameters */
-app.get('/:word/echo',function(req, res){console.log(req);});
+app.get('/echo',function(req, res){res.send(res.json(req.params))});
 
 /** 10) Get input from client - Query parameters */
 // /name?first=<firstname>&last=<lastname>
